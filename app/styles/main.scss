@@ -1,84 +1,118 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
-@import "../../base/base";
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
 body {
-  background: #fafafa;
+  background: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
-}
 
 .container {
   @include outer-container;
   $mobile: new-breakpoint(max-width 400px 4);
   $medium: new-breakpoint(max-width 700px 4);
-  max-width: 1600px;
-  width: 100%;
-  margin: 0px;
+  max-width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
 
   .navbar {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(3);
+      @include span-columns(4);
     }//end media(mobile)
-    min-height: 80px;
+    min-height: 60px;
+    width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    margin-right: 0px;
+
+    .buttons{
+      margin-left: 37%;
+
+      li{
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 5%;
+      }
+    }
   }//end navbar
 
   .bigPic {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(3);
+      @include span-columns(4);
     }//end media(mobile)
     min-height: 600px;
+    //max-width: 1278px;
+    width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    margin-right: 0px;
+    margin-bottom: 40px;
     background: #fff url(../images/atlskyline.jpg) no-repeat center center;
-  //  background-size: 240% 150%;
 
-  }
+    .heading {
+      color: white;
+      text-align: center;
+      //margin-top: 250px;
+      z-index: 5;
+    }
 
-  .skillsIntro {
-    @include span-columns(12);
-    @include media($mobile) {
-      @include span-columns(3);
-    }//end media(mobile)
-    min-height: 80px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-  }
+  }//end bigPic
 
   .skills {
     @include span-columns(12);
+    @include media($mobile) {
+      @include span-columns(4);
+    }//end media(mobile)
+    background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
-    border: 1px solid black;
-    margin-left: 3.0%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 60px;
 
     .skillsH {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 60px;
     }
 
+  .skillscontain {
+    @include span-columns(12);
+    @include media($mobile) {
+      @include span-columns(4);
+    }//end media(mobile)
+    min-height: 240px;
+    margin-left: 6%;
+    margin-right: 6%;
+
   .skills1 {
-    @include span-columns(4 of 12);
+    @include span-columns(3.75 of 12);
+    @include media($mobile) {
+      @include span-columns(4);
+    }//end media(mobile)
     min-height: 200px;
-    border: 1px solid black;
+    padding-right: 5%;
   }
 
   .skills2 {
-    @include span-columns(4 of 12);
+    @include span-columns(3.75 of 12);
+    @include media($mobile) {
+      @include span-columns(4);
+    }//end media(mobile)
     min-height: 200px;
-    border: 1px solid black;
+    padding-right: 5%;
   }
 
   .skills3 {
-    @include span-columns(4 of 12);
+    @include span-columns(3.75 of 12);
+    @include media($mobile) {
+      @include span-columns(4);
+    }//end media(mobile)
     min-height: 200px;
-    border: 1px solid black;
+    padding-right: 5%;
   }
+}//end skills contain
 }//end skills
 
   .works {
@@ -88,7 +122,6 @@ body {
     }//end media(mobile)
     margin-top: 40px;
     margin-bottom: 50px;
-    margin-left: 5%;
     min-height: 400px;
 
       .proH {
@@ -100,7 +133,7 @@ body {
       @include span-columns(3);
       @include omega(3n);
       @include media($mobile) {
-        @include span-columns(3);
+        @include span-columns(4);
       }//end media(mobile)
       display: inline-block;
       min-height: 300px;
@@ -125,7 +158,7 @@ body {
     }
     .views li img {
       display: block;
-      width: 600px;
+      width: 100%;
       height: 300px;
       position: relative
     }
@@ -207,5 +240,5 @@ body {
 
   }// end .works
 
-
 }//end container
+}//end body
