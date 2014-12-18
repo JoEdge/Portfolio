@@ -2,7 +2,7 @@
 Header Image - Atlanta_Skyline_from_Buckhead
 www.flickr.com/photos/cokak/355135172
 
-Conact Image - treestump funghi
+Contact Image - treestump funghi
 www.flickr.com/photos/r-salz/4653375605
 
 ###Icons
