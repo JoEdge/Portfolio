@@ -3,37 +3,42 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
+
+$Raleway: 'Raleway', sans-serif;
+$Fjalla: 'Fjalla One', sans-serif;
 body {
   background: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $Raleway;
   color: #333;
 
 .container {
   @include outer-container;
+  $medium: new-breakpoint(max-width 750px 12);
   $mobile: new-breakpoint(max-width 400px 4);
-  $medium: new-breakpoint(max-width 700px 4);
-  max-width: 100%;
-  margin-right: 0px;
-  margin-left: 0px;
+  max-width: 1600px;
+  position: relative;
 
   .navbar {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(6);
     }//end media(mobile)
-    min-height: 60px;
+    min-height: 40px;
     width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     margin-right: 0px;
 
     .buttons{
-      margin-left: 37%;
+      @include span-columns(4 of 12);
+      @include media($mobile) {
+        @include span-columns(6);
+      }//end media(mobile)
 
       li{
       display: inline-block;
-      text-decoration: none;
       margin-right: 5%;
+      font:normal 24px $Fjalla;
+      cursor: pointer;
+      list-style-type: none;
       text-shadow:
       1px 0px 1px #ccc, 0px 1px 1px #eee,
       2px 1px 1px #ccc, 1px 2px 1px #eee,
@@ -42,8 +47,23 @@ body {
       5px 4px 1px #ccc, 4px 5px 1px #eee,
       6px 5px 1px #ccc, 5px 6px 1px #eee,
       7px 6px 1px #ccc;
+
+      -webkit-transition: all 0.3s ease-in;
+      -moz-transition: all 0.3s ease-in;
+      -o-transition: all 0.3s ease-in;
+
+        h4{
+          margin-top: 10px;
+          margin-bottom: 10px;
+          color: black;
+        }
+
+        h4:hover  {
+          font-weight: bold;
+          color: red;
+        }
       }
-    }
+    }//end bu
   }//end navbar
 
   .bigPic {
@@ -58,12 +78,15 @@ body {
     border-bottom: 1px solid black;
     margin-right: 0px;
     margin-bottom: 40px;
-    background: #fff url(../images/atlskyline.jpg) no-repeat center center;
+    background: #fff url(../images/atlanta.jpg) no-repeat center center;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
 
     .heading {
       text-align: center;
-      //margin-top: 250px;
-      font:normal 25pt Arial;
+      margin-top: 130px;
+      font:normal 32px $Fjalla;
       color:#FFFFFF;
       text-shadow: 0 1px 0 #ccc,
       0 2px 0 #c9c9c9,
@@ -78,6 +101,13 @@ body {
       0 10px 10px rgba(0,0,0,.2),
       0 20px 20px rgba(0,0,0,.15);
       z-index: 5;
+
+      li{
+        display: inline-block;
+        margin-left: 3%;
+        font:normal 40px $Fjalla;
+        list-style-type: none;
+      }
     }
 
   }//end bigPic
@@ -91,11 +121,13 @@ body {
     min-height: 240px;
     margin-top: 40px;
     margin-bottom: 40px;
+    margin-right: 0px;
     padding-bottom: 60px;
 
     .skillsH {
-      text-align: center;
       margin-bottom: 60px;
+      font:normal 32px $Fjalla;
+      text-align: center;
       text-shadow:
       1px 0px 1px #ccc, 0px 1px 1px #eee,
       2px 1px 1px #ccc, 1px 2px 1px #eee,
@@ -107,13 +139,8 @@ body {
     }
 
   .skillscontain {
-    @include span-columns(12);
-    @include media($mobile) {
-      @include span-columns(4);
-    }//end media(mobile)
     min-height: 240px;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 13%;
 
   .skills1 {
     @include span-columns(3.75 of 12);
@@ -147,15 +174,15 @@ body {
   .works {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(3);
+      @include span-columns(4);
     }//end media(mobile)
-    margin-top: 40px;
     margin-bottom: 50px;
     min-height: 400px;
 
       .proH {
+        margin-bottom: 60px;
+        font:normal 32px $Fjalla;
         text-align: center;
-        margin-bottom: 20px;
         text-shadow:
         1px 0px 1px #ccc, 0px 1px 1px #eee,
         2px 1px 1px #ccc, 1px 2px 1px #eee,
@@ -170,7 +197,7 @@ body {
       @include span-columns(3);
       @include omega(3n);
       @include media($mobile) {
-        @include span-columns(4);
+        @include span-columns(3.5);
       }//end media(mobile)
       display: inline-block;
       min-height: 300px;
@@ -181,7 +208,8 @@ body {
       position: relative;
       text-align: center;
       box-shadow: 1px 1px 2px #e6e6e6;
-      cursor: default;
+      cursor: pointer;
+      list-style-type: none;
       background: #fff url(../images/swirly.jpg) no-repeat center center
     }
 
@@ -274,8 +302,49 @@ body {
       opacity: 1;
       transition-delay: 0.5s;
     }
-
   }// end .works
+
+  .contact {
+    @include span-columns(12);
+    @include media($mobile) {
+      @include span-columns(3);
+    }//end media(mobile)
+    background: HSLA(0, 0%, 95%, 1);
+    min-height: 240px;
+    margin-top: 40px;
+
+    .contactH {
+      margin-bottom: 60px;
+      font:normal 32px $Fjalla;
+      text-align: center;
+      text-shadow:
+      1px 0px 1px #ccc, 0px 1px 1px #eee,
+      2px 1px 1px #ccc, 1px 2px 1px #eee,
+      3px 2px 1px #ccc, 2px 3px 1px #eee,
+      4px 3px 1px #ccc, 3px 4px 1px #eee,
+      5px 4px 1px #ccc, 4px 5px 1px #eee,
+      6px 5px 1px #ccc, 5px 6px 1px #eee,
+      7px 6px 1px #ccc;
+    }
+
+    .contact1{
+      @include span-columns(5);
+      @include media($mobile) {
+        @include span-columns(3);
+      }//end media(mobile)
+
+    }
+
+    .contact2{
+      @include span-columns(5);
+      @include media($mobile) {
+        @include span-columns(3);
+      }//end media(mobile)
+      float: left;
+      list-style-type: none;
+    }
+
+  }
 
 }//end container
 }//end body
