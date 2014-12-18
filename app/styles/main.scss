@@ -6,6 +6,7 @@
 
 $Raleway: 'Raleway', sans-serif;
 $Fjalla: 'Fjalla One', sans-serif;
+
 body {
   background: white;
   font-family: $Raleway;
@@ -52,6 +53,10 @@ body {
       -moz-transition: all 0.3s ease-in;
       -o-transition: all 0.3s ease-in;
 
+        a {
+          color: inherit;
+        }
+
         h4{
           margin-top: 10px;
           margin-bottom: 10px;
@@ -69,7 +74,7 @@ body {
   .bigPic {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(6.5);
     }//end media(mobile)
     min-height: 600px;
     //max-width: 1278px;
@@ -78,16 +83,21 @@ body {
     border-bottom: 1px solid black;
     margin-right: 0px;
     margin-bottom: 40px;
-    background: #fff url(../images/atlanta.jpg) no-repeat center center;
+    background: url(../images/atlanta.jpg) no-repeat center center;
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
 
     .heading {
+      @include media($mobile) {
+        @include span-columns(4);
+        margin-top: 80px;
+        font:normal 28px $Fjalla;
+      }//end media(mobile)
       text-align: center;
       margin-top: 130px;
       font:normal 32px $Fjalla;
-      color:#FFFFFF;
+      color:white;
       text-shadow: 0 1px 0 #ccc,
       0 2px 0 #c9c9c9,
       0 3px 0 #bbb,
@@ -115,7 +125,7 @@ body {
   .skills {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(6.5);
     }//end media(mobile)
     background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
@@ -149,6 +159,11 @@ body {
     }//end media(mobile)
     min-height: 200px;
     padding-right: 5%;
+    font-size:16px;
+
+    h4{
+      font-size:18px;
+    }
   }
 
   .skills2 {
@@ -158,6 +173,11 @@ body {
     }//end media(mobile)
     min-height: 200px;
     padding-right: 5%;
+    font-size:16px;
+
+    h4{
+      font-size:18px;
+    }
   }
 
   .skills3 {
@@ -167,6 +187,11 @@ body {
     }//end media(mobile)
     min-height: 200px;
     padding-right: 5%;
+    font-size:16px;
+
+    h4{
+      font-size:18px;
+    }
   }
 }//end skills contain
 }//end skills
@@ -174,7 +199,7 @@ body {
   .works {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(6.5);
     }//end media(mobile)
     margin-bottom: 50px;
     min-height: 400px;
@@ -240,7 +265,7 @@ body {
     .views li p {
       font-family: Georgia, serif;
       font-style: italic;
-      font-size: 12px;
+      font-size: 14px;
       position: relative;
       color: #fff;
       padding: 10px 20px 20px;
@@ -307,11 +332,12 @@ body {
   .contact {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(3);
+      @include span-columns(6.5);
     }//end media(mobile)
     background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
     margin-top: 40px;
+    padding-bottom: 60px;
 
     .contactH {
       margin-bottom: 60px;
@@ -328,20 +354,55 @@ body {
     }
 
     .contact1{
-      @include span-columns(5);
+      @include span-columns(6);
       @include media($mobile) {
-        @include span-columns(3);
+        @include span-columns(4);
       }//end media(mobile)
+      margin-left: 4%;
+      margin-right: 13%;
+      width: 39%;
+      height: 370px;
+      background: url(../images/stump.jpg);
+
+      p {
+        margin-top: 60px;
+        margin-left: 17%;
+        margin-right: 20%;
+        font:normal 28px $Fjalla;
+        -webkit-text-stroke: 1px black;
+        color: white;
+        text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+      }
+
+      p:hover  {
+        color: red;
+      }
 
     }
 
     .contact2{
-      @include span-columns(5);
+      @include span-columns(4.5);
       @include media($mobile) {
-        @include span-columns(3);
+        @include span-columns(4);
+        font-size:23px;
       }//end media(mobile)
-      float: left;
       list-style-type: none;
+      font-size:32px;
+      color:black;
+
+      a {
+        color: inherit;
+      }
+
+      li:hover  {
+        color: red;
+      }
+
     }
 
   }
