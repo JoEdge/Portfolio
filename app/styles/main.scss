@@ -2,10 +2,12 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-// Custom Styles
-
+// Fonts
 $Raleway: 'Raleway', sans-serif;
 $Fjalla: 'Fjalla One', sans-serif;
+
+//Colors
+$Chesnut: HSLA(6, 50%, 48%, 1);
 
 body {
   background: white;
@@ -65,7 +67,7 @@ body {
 
         h4:hover  {
           font-weight: bold;
-          color: red;
+          color: $Chesnut;
         }
       }
     }//end bu
@@ -380,7 +382,7 @@ body {
       }
 
       p:hover  {
-        color: red;
+        color: $Chesnut;
       }
 
     }
@@ -400,7 +402,7 @@ body {
       }
 
       li:hover  {
-        color: red;
+        color: $Chesnut;
       }
 
     }
