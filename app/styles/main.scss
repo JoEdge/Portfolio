@@ -359,6 +359,7 @@ body {
       @include span-columns(6);
       @include media($mobile) {
         @include span-columns(4);
+        width: 90%
       }//end media(mobile)
       margin-left: 4%;
       margin-right: 13%;
@@ -392,6 +393,7 @@ body {
       @include media($mobile) {
         @include span-columns(4);
         font-size:23px;
+        margin-left: 5%;
       }//end media(mobile)
       list-style-type: none;
       font-size:32px;
