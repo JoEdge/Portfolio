@@ -83,8 +83,8 @@ body {
     min-height: 600px;
     //max-width: 1278px;
     width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
     margin-right: 0px;
     margin-bottom: 40px;
 
@@ -94,11 +94,9 @@ body {
       @include span-columns(7.25);
     }//end media(mobile)
     position: absolute;
-    min-height: 600px;
+    min-height: 595px;
     //max-width: 1278px;
     width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     margin-right: 0px;
     margin-bottom: 40px;
     background: url(../images/atlanta.jpg) no-repeat center center;
@@ -114,24 +112,40 @@ body {
         font:normal 28px $Fjalla;
       }//end media(mobile)
       position: relative;
-      margin-top: 130px;
+      margin-top: 100px;
       font:normal 32px $Fjalla;
       color:white;
       z-index: 5;
 
       h1{
         text-align: center;
-        margin-left: 2%;
+        margin-left: 0px;
       }
 
       p{
-        margin-left: 3%;
+        margin-left: 0px;
         font:normal 40px $Fjalla;
         text-align: center;
         list-style-type: none;
         text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
         0px 8px 13px rgba(0,0,0,0.1),
         0px 18px 23px rgba(0,0,0,0.1);
+      }
+
+      li {
+        display: inline-block;
+        width: 5%;
+        height: 60px;
+        padding-top: 5px;
+        border-radius: 60em;
+        background-color: white;
+        color: black;
+        list-style-type: none;
+        text-align: center;
+      }
+      .a1{
+        margin-left: 43%;
+        margin-right: 4%;
       }
     }
 
@@ -375,10 +389,11 @@ body {
     background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
     margin-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 
     .contactH {
-      margin-bottom: 60px;
+      margin-top: 60px;
+      margin-bottom: 20px;
       font:normal 32px $Fjalla;
       text-align: center;
       text-shadow:
@@ -391,6 +406,18 @@ body {
       7px 6px 1px #ccc;
     }
 
+    // .wrapper {
+    //   @include span-columns(12);
+    //   @include media($mobile) {
+    //     @include span-columns(6.5);
+    //   }//end media(mobile)
+    //   min-height: 240px;
+    //   margin-top: 10px;
+    //   padding-bottom: 60px;
+    //   //background: url(../images/dappled.jpg) no-repeat center center;
+    //   background-size: 100%;
+
+
     .contact1{
       @include span-columns(6);
       @include media($mobile) {
@@ -401,25 +428,14 @@ body {
       margin-right: 13%;
       width: 39%;
       height: 370px;
-      background: url(../images/stump.jpg);
 
       p {
         margin-top: 60px;
         margin-left: 17%;
         margin-right: 20%;
-        font:normal 28px $Fjalla;
-        -webkit-text-stroke: 1px black;
-        color: white;
-        text-shadow:
-        3px 3px 0 #000,
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-      }
-
-      p:hover  {
-        color: $Chesnut;
+        font-size:26px;
+        color:black;
+        text-align: justify;
       }
 
     }
@@ -431,6 +447,7 @@ body {
         font-size:23px;
         margin-left: 5%;
       }//end media(mobile)
+      padding-top: 26px;
       list-style-type: none;
       font-size:32px;
       color:black;
@@ -445,7 +462,7 @@ body {
       }
 
     }
-
+   //}
   }
 
 }//end container
