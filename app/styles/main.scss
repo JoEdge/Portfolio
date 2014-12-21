@@ -132,23 +132,38 @@ body {
         0px 18px 23px rgba(0,0,0,0.1);
       }
 
+      ul {
+        display: block;
+        margin-left: 37%;
+
       li {
         display: inline-block;
-        width: 5%;
-        height: 60px;
-        padding-top: 5px;
-        border-radius: 60em;
+        width: 8%;
+        height: 9%;
+        margin-right: 4%;
+        border-radius: 50em;
         background-color: white;
         color: black;
         list-style-type: none;
         text-align: center;
+        -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
       }
-      .a1{
-        margin-left: 43%;
-        margin-right: 4%;
+      .a1 {
+        padding-top: 3px;
+        padding-right: 2px;
+      }
+
+      .a2 {
+        padding-top: 5px;
+      }
+
+      .a3 {
+        padding-top: 3px;
       }
     }
-
+   }
   }//end MainOne
 
   .skills {
@@ -406,17 +421,6 @@ body {
       7px 6px 1px #ccc;
     }
 
-    // .wrapper {
-    //   @include span-columns(12);
-    //   @include media($mobile) {
-    //     @include span-columns(6.5);
-    //   }//end media(mobile)
-    //   min-height: 240px;
-    //   margin-top: 10px;
-    //   padding-bottom: 60px;
-    //   //background: url(../images/dappled.jpg) no-repeat center center;
-    //   background-size: 100%;
-
 
     .contact1{
       @include span-columns(6);
@@ -447,10 +451,14 @@ body {
         font-size:23px;
         margin-left: 5%;
       }//end media(mobile)
-      padding-top: 26px;
+      padding-top: 16px;
       list-style-type: none;
-      font-size:32px;
+      font-size:28px;
       color:black;
+
+      .name {
+        font-size:32px;
+      }
 
       a {
         color: inherit;
@@ -458,6 +466,10 @@ body {
       }
 
       li:hover  {
+        color: $Chesnut;
+      }
+
+      .link:hover {
         color: $Chesnut;
       }
 
