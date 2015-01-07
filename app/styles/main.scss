@@ -193,17 +193,17 @@ body {
 
   .skillscontain {
     min-height: 240px;
-    margin-left: 13%;
+    margin-left: 15%;
 
   .skills1 {
-    @include span-columns(3.75 of 12);
+    @include span-columns(3.95 of 12);
     @include media($mobile) {
       @include span-columns(4);
     }//end media(mobile)
     text-align: justify;
     margin: 0 auto;
     min-height: 200px;
-    padding-right: 5%;
+    padding-right: 7%;
     font-size:16px;
 
     img {
@@ -217,14 +217,14 @@ body {
   }
 
   .skills2 {
-    @include span-columns(3.75 of 12);
+    @include span-columns(3.95 of 12);
     @include media($mobile) {
       @include span-columns(4);
     }//end media(mobile)
     text-align: justify;
     margin: 0 auto;
     min-height: 200px;
-    padding-right: 5%;
+    padding-right: 7%;
     font-size:16px;
 
     img {
@@ -237,14 +237,14 @@ body {
   }
 
   .skills3 {
-    @include span-columns(3.75 of 12);
+    @include span-columns(3.95 of 12);
     @include media($mobile) {
       @include span-columns(4);
     }//end media(mobile)
     text-align: justify;
     margin: 0 auto;
     min-height: 200px;
-    padding-right: 5%;
+    padding-right: 7%;
     font-size:16px;
 
     img {
