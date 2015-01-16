@@ -17,14 +17,14 @@ body {
 .container {
   @include outer-container;
   $medium: new-breakpoint(max-width 750px 12);
-  $mobile: new-breakpoint(max-width 400px 4);
+  $mobile: new-breakpoint(max-width 480px 4.5);
   max-width: 1600px;
   position: relative;
 
   .navbar {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(6);
+      @include span-columns(4.5);
     }//end media(mobile)
     min-height: 40px;
     width: 100%;
@@ -33,7 +33,7 @@ body {
     .buttons{
       @include span-columns(4 of 12);
       @include media($mobile) {
-        @include span-columns(6);
+        @include span-columns(4.5);
       }//end media(mobile)
 
       li{
@@ -77,7 +77,7 @@ body {
   .mainOne {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(7.25);
+      @include span-columns(4.5);
     }//end media(mobile)
     position: relative;
     min-height: 600px;
@@ -91,7 +91,7 @@ body {
   .bigPic {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(7.25);
+      @include span-columns(4.5);
     }//end media(mobile)
     position: absolute;
     min-height: 595px;
@@ -107,9 +107,9 @@ body {
 
     .heading {
       @include media($mobile) {
-        @include span-columns(4);
+        @include span-columns(4.5);
         margin-top: 80px;
-        font:normal 28px $Fjalla;
+        font:normal 18px $Fjalla;
       }//end media(mobile)
       position: relative;
       margin-top: 100px;
@@ -122,7 +122,12 @@ body {
         margin-left: 0px;
       }
 
-      p{
+      p {
+        @include media($mobile) {
+          @include span-columns(4);
+          font:normal 28px $Fjalla;
+          margin-left: 5%;
+        }//end media(mobile)
         margin-left: 0px;
         font:normal 40px $Fjalla;
         text-align: center;
@@ -133,6 +138,10 @@ body {
       }
 
       ul {
+        @include media($mobile) {
+          @include span-columns(4);
+          margin-left: 25%;
+        }//end media(mobile)
         display: block;
         margin-left: 37%;
 
@@ -167,7 +176,8 @@ body {
   .skills {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(6.5);
+      @include span-columns(4.5);
+      margin-right: 0px;
     }//end media(mobile)
     background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
@@ -192,13 +202,19 @@ body {
     }
 
   .skillscontain {
+    @include media($mobile) {
+      @include span-columns(4);
+      margin-left: 10%;
+      margin-right: 0px;
+    }//end media(mobile)
     min-height: 240px;
     margin-left: 15%;
 
   .skills1 {
     @include span-columns(3.95 of 12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(4.5);
+      margin-right: 0px;
     }//end media(mobile)
     text-align: justify;
     margin: 0 auto;
@@ -219,7 +235,8 @@ body {
   .skills2 {
     @include span-columns(3.95 of 12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(4.5);
+      margin-right: 0px;
     }//end media(mobile)
     text-align: justify;
     margin: 0 auto;
@@ -239,7 +256,8 @@ body {
   .skills3 {
     @include span-columns(3.95 of 12);
     @include media($mobile) {
-      @include span-columns(4);
+      @include span-columns(4.5);
+      margin-right: 0px;
     }//end media(mobile)
     text-align: justify;
     margin: 0 auto;
@@ -261,7 +279,7 @@ body {
   .works {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(6.5);
+      @include span-columns(4);
     }//end media(mobile)
     margin-bottom: 50px;
     min-height: 400px;
@@ -284,7 +302,7 @@ body {
       @include span-columns(3);
       @include omega(3n);
       @include media($mobile) {
-        @include span-columns(3.5);
+        @include span-columns(4.5);
       }//end media(mobile)
       display: inline-block;
       min-height: 300px;
@@ -395,10 +413,11 @@ body {
     }
   }// end .works
 
+
   .contact {
     @include span-columns(12);
     @include media($mobile) {
-      @include span-columns(6.5);
+      @include span-columns(4.5);
     }//end media(mobile)
     background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
@@ -420,24 +439,30 @@ body {
       7px 6px 1px #ccc;
     }
 
-
     .contact1{
       @include span-columns(4);
       @include media($mobile) {
-        @include span-columns(2);
-        width: 90%
+        @include span-columns(4.5);
+        width: 95%;
+        margin-left: 5%;
+        margin-right: 0%;
+        height: 270px;
       }//end media(mobile)
       margin-left: 10%;
       margin-right: 10%;
       width: 39%;
       height: 370px;
 
-      p {
+      .about {
+        @include media($mobile) {
+          @include span-columns(3.5);
+          margin-left: 10%;
+        }//end media(mobile)
         margin-top: 60px;
         margin-left: 18%;
         margin-right: 18%;
-        font-size:26px;
-        color:black;
+        font-size: 26px;
+        color: black;
         text-align: justify;
       }
 
@@ -446,9 +471,10 @@ body {
     .contact2{
       @include span-columns(4.5);
       @include media($mobile) {
-        @include span-columns(4);
+        @include span-columns(4.5);
+        width: 88%;
         font-size:23px;
-        margin-left: 25%;
+        margin-left: 12%;
       }//end media(mobile)
       padding-top: 16px;
       list-style-type: none;
@@ -456,7 +482,13 @@ body {
       color:black;
 
       .name {
+        @include media($mobile) {
+        @include span-columns(4.5);
+        font-size:23px;
+        padding-left: 10%;
+      }//end media(mobile)
         font-size:32px;
+        padding-top:10px;
         margin-bottom: 12px;
       }
 
@@ -476,9 +508,7 @@ body {
       .link:hover {
         color: $Chesnut;
       }
-
     }
-   //}
   }
 
 }//end container
