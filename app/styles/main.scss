@@ -422,6 +422,7 @@ body {
     @include span-columns(12);
     @include media($mobile) {
       @include span-columns(4.5);
+      width: 100%;
     }//end media(mobile)
     background: HSLA(0, 0%, 95%, 1);
     min-height: 240px;
@@ -448,19 +449,22 @@ body {
       @include media($mobile) {
         @include span-columns(4.5);
         width: 95%;
-        margin-left: 5%;
-        margin-right: 0%;
-        height: 270px;
+        margin-left: 4%;
+        margin-right: 4%;
       }//end media(mobile)
       margin-left: 7%;
       margin-right: 10%;
-      width: 41%;
-      height: 370px;
+      width: 42%;
+      //height: 370px;
 
       .about {
         @include media($mobile) {
-          @include span-columns(3.5);
-          margin-left: 10%;
+          @include span-columns(3.75);
+          width: 95%;
+          margin-left: 5%;
+          margin-right: 5%;
+          text-align: left;
+          word-wrap: break-word
         }//end media(mobile)
         margin-top: 60px;
         margin-left: 18%;
@@ -476,9 +480,8 @@ body {
       @include span-columns(4.5);
       @include media($mobile) {
         @include span-columns(4.5);
-        width: 88%;
-        font-size:23px;
-        margin-left: 12%;
+        width: 97%;
+        margin-left: 3%;
       }//end media(mobile)
       padding-top: 16px;
       list-style-type: none;
@@ -488,8 +491,8 @@ body {
       .name {
         @include media($mobile) {
         @include span-columns(4.5);
-        font-size:23px;
-        padding-left: 10%;
+        text-align: center;
+        margin-top: 10px;
       }//end media(mobile)
         font-size:32px;
         padding-top:10px;
@@ -501,11 +504,22 @@ body {
         text-decoration: none;
       }
 
+      li {
+        @include media($mobile) {
+          @include span-columns(4.5);
+          text-align: center;
+        }//end media(mobile)
+      }
+
       li:hover  {
         color: $Chesnut;
       }
 
       .link {
+        @include media($mobile) {
+          @include span-columns(4.5);
+          text-align: center;
+        }//end media(mobile)
         margin-top: 12px;
       }
 
