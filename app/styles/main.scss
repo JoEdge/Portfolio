@@ -139,13 +139,17 @@ body {
 
       ul {
         @include media($mobile) {
-          @include span-columns(4);
-          margin-left: 25%;
+          @include span-columns(3.5);
+          margin-left: 27%;
         }//end media(mobile)
         display: block;
         margin-left: 37%;
 
       li {
+        @include media($mobile) {
+          width: 10%;
+          height: 10%;
+        }//end media(mobile)
         display: inline-block;
         width: 8%;
         height: 9%;
@@ -448,9 +452,9 @@ body {
         margin-right: 0%;
         height: 270px;
       }//end media(mobile)
-      margin-left: 10%;
+      margin-left: 7%;
       margin-right: 10%;
-      width: 39%;
+      width: 41%;
       height: 370px;
 
       .about {
